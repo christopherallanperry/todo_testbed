@@ -3,7 +3,7 @@
 ## Purpose
 This repo is intended as a testbed for new features on a simple 'TODO' app. It is based on a clone of one created during the @generalassembly 'Web Development Immersive' course I completed in March.
 
-## Feature Added
+## Features Added
 - Created date for each todo
 - Due date for each todo
 
