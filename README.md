@@ -1,7 +1,7 @@
 # README - Todo Testbed
 
 ## Purpose
-This repo is intended as a testbed for new features on a simple AngularJS 'TODO' app. It is based on a clone of one created during the @generalassembly 'Web Development Immersive' course I completed in March.
+This repo is intended as a testbed for new features on a simple AngularJS 'TODO' app. It is based on a clone of one created during the [@generalassembly](https://twitter.com/GA_London) ['Web Development Immersive' course](https://generalassemb.ly/education/web-development-immersive) I completed in March.
 
 ## Features added
 - Created date for each todo (in both remaining and archive sections)
