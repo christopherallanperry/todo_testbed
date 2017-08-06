@@ -1,0 +1,29 @@
+<!-- begin add new todo -->
+<form class="add-todo" ng-submit="todos.todosCreate()">
+  <fieldset>
+    <h4>Add New Todo...</h4>
+    <p>
+      <input id="newTodoTxt" class="text-box" type="text" placeholder="I need to..." ng-model="todos.text">
+    </p>
+    <p>
+      <label for="newTodoDate">Due Date (optional)</label>
+      <input id="newTodoDate" class="date-box" type="date" ng-model="todos.dueDate">
+      <input type="submit" class="btn btn-add" value="+">
+    </p>
+  </fieldset>
+</form>
+<!-- end add new todo -->
+
+<!-- begin show all remaining todos -->
+<section class="todo-list">
+  <ul>
+    <li ng-repeat="todo in todos.todosRemaining() track by $index">
+      <input class="checkbox" type="checkbox" ng-model="todo.done" id="todo-{{$index}}">
+      <label for="todo-{{$index}}" ng-class="{done: todo.done}">{{ todo.task }}</label>
+      <a ui-sref="todosShow({ id: $index })">more info</a>
+      <button class="btn btn-delete" ng-click="todos.todosDelete(todo)">x</button>
+      <div class="todoDates"><em>Created:</em> {{ todo.createDte | date:'d MMM yyyy, HH:mm:ss' }}. <em>Due:</em> {{ todo.dueDte | date:'d MMM yyyy, HH:mm:ss' }}</div>
+    </li>
+  </ul>
+</section>
+<!-- end show all todos -->
