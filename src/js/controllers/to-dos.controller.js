@@ -29,14 +29,17 @@ function ToDosCtrl($stateParams){
     vm.todos.push({ task: vm.text, done: false, createDte: new Date(), dueDte: vm.dueDate, completedDte: null });
     vm.text = null;
     vm.dueDate = null;
+    // vm.completedDate = null;
     // console.log(vm.todos);
   }
 
   function updateCompletedDate(todo) {
-    if (todo.checked) {
-		  // do something
+    if (todo.completedDte) {
+      // console.log('todo.checked returns true');
+      todo.completedDte = null;
   	} else {
-  		// do something else
+      // console.log('todo.checked returns false');
+      todo.completedDte = new Date();
   	}
   }
 

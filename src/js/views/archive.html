@@ -2,10 +2,10 @@
 <section class="todo-list">
   <ul>
     <li ng-repeat="todo in todos.todosCompleted() track by $index">
-      <input class="checkbox" type="checkbox" ng-model="todo.done" id="todo-{{$index}}">
+      <input class="checkbox" type="checkbox" ng-change="todos.updateCompletedDate(todo)" ng-model="todo.done" id="todo-{{$index}}">
       <label for="todo-{{$index}}" ng-class="{done: todo.done}">{{ todo.task }}</label>
       <button class="btn btn-delete" ng-click="todos.todosDelete(todo)">x</button>
-      <div class="todoDates"><em>Created:</em> {{ todo.createDte | date:'d MMM yyyy, HH:mm:ss' }}. <em>Due:</em> {{ todo.dueDte | date:'d MMM yyyy, HH:mm:ss' }}</div>
+      <div class="todoDates"><em>Created:</em> {{ todo.createDte | date:'d MMM yyyy, HH:mm:ss' }}. <em>Due:</em> {{ todo.dueDte | date:'d MMM yyyy, HH:mm:ss' }}. <em>Completed:</em> {{ todo.completedDte | date:'d MMM yyyy, HH:mm:ss' }}</div>
     </li>
   </ul>
 </section>
